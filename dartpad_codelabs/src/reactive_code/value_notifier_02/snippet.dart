@@ -43,7 +43,7 @@ class CounterPage extends StatelessWidget {
       body: Center(
         child: Container(
           color:
-          Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+              Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
           child: Column(
             children: [
               CounterText(
@@ -85,12 +85,13 @@ class CounterText extends StatelessWidget {
   Widget build(BuildContext context) {
     //TODO [1]: Wrap the Container by ValueListenableBuilder that can listen to a ValueNotifier
     return Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(48),
-        color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
-        child: Text(
-          count.toString(),
-          textAlign: TextAlign.center,
-        ));
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.all(48),
+      color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+      child: Text(
+        count.toString(),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }

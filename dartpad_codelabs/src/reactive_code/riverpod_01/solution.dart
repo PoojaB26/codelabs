@@ -1,4 +1,3 @@
-
 //ignore_for_file: unused_field, prefer_const_literals_to_create_immutables, prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'dart:math' as math;
@@ -6,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final counterProvider = StateNotifierProvider.autoDispose<CounterNotifier, int>(
-      (ref) => CounterNotifier(),
+  (ref) => CounterNotifier(),
 );
 
 void main() {
@@ -27,9 +26,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class CounterNotifier extends StateNotifier<int> {
   CounterNotifier() : super(0);
+
   void increment() {
     state++;
   }
@@ -39,7 +38,6 @@ class CounterNotifier extends StateNotifier<int> {
   }
 }
 
-
 class CounterPage extends StatefulWidget {
   CounterPage({Key? key}) : super(key: key);
 
@@ -48,7 +46,6 @@ class CounterPage extends StatefulWidget {
 }
 
 class _CounterPageState extends State<CounterPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +55,7 @@ class _CounterPageState extends State<CounterPage> {
       body: Center(
         child: Container(
           color:
-          Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+              Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
           child: Column(
             children: [
               CounterText(
@@ -74,7 +71,7 @@ class _CounterPageState extends State<CounterPage> {
           FloatingActionButton(
             backgroundColor: Colors.grey,
             child: const Icon(Icons.exposure_minus_1),
-            onPressed: (){},
+            onPressed: () {},
           ),
           const SizedBox(
             height: 10,
@@ -82,7 +79,7 @@ class _CounterPageState extends State<CounterPage> {
           FloatingActionButton(
             backgroundColor: Colors.red,
             child: const Icon(Icons.exposure_plus_1),
-            onPressed: (){},
+            onPressed: () {},
           ),
         ],
       ),
@@ -98,12 +95,13 @@ class CounterText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(48),
-        color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
-        child: Text(
-          count.toString(),
-          textAlign: TextAlign.center,
-        ));
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.all(48),
+      color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+      child: Text(
+        count.toString(),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }

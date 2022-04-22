@@ -88,13 +88,14 @@ class CounterBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(48),
-        //TODO[2]: Write logic to assign random color to observe rebuilds
-        color: Colors.deepPurple,
-        child: Text(
-          count.toString(),
-          textAlign: TextAlign.center,
-        ));
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.all(48),
+      //TODO[2]: Write logic to assign random color to observe rebuilds
+      color: Colors.deepPurple,
+      child: Text(
+        count.toString(),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }

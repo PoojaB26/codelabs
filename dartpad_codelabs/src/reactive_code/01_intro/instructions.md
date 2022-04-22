@@ -45,7 +45,9 @@ So whenever a widget rebuilds, the color will be randomly assigned, and this way
 observe the widget rebuilds.
 
 ```dart
-Colors.primaries[math.Random().nextInt(Colors.primaries.length)]
+Container(
+  color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+ ...)
 ```
 
 To call the `Random()` method, you need to import tha `math` package.

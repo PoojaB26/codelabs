@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final counterProvider = StateNotifierProvider.autoDispose<CounterNotifier, int>(
-      (ref) => CounterNotifier(),
+  (ref) => CounterNotifier(),
 );
 
 void main() {
@@ -55,7 +55,7 @@ class _CounterPageState extends State<CounterPage> {
       body: Center(
         child: Container(
           color:
-          Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+              Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
           child: Column(
             children: [
               CounterText(),
@@ -65,30 +65,29 @@ class _CounterPageState extends State<CounterPage> {
       ),
       floatingActionButton: Consumer(
           builder: (BuildContext context, WidgetRef ref, Widget? child) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                FloatingActionButton(
-                  backgroundColor: Colors.grey,
-                  child: const Icon(Icons.exposure_minus_1),
-                  onPressed: () {
-                    ref.read(counterProvider.notifier).decrement();
-                  },
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                FloatingActionButton(
-                  backgroundColor: Colors.red,
-                  child: const Icon(Icons.exposure_plus_1),
-                  onPressed: () {
-                    ref.read(counterProvider.notifier).increment();
-                  },
-                ),
-              ],
-            );
-          }
-      ),
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              backgroundColor: Colors.grey,
+              child: const Icon(Icons.exposure_minus_1),
+              onPressed: () {
+                ref.read(counterProvider.notifier).decrement();
+              },
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            FloatingActionButton(
+              backgroundColor: Colors.red,
+              child: const Icon(Icons.exposure_plus_1),
+              onPressed: () {
+                ref.read(counterProvider.notifier).increment();
+              },
+            ),
+          ],
+        );
+      }),
     );
   }
 }
@@ -101,12 +100,13 @@ class CounterText extends ConsumerWidget {
     int count = ref.watch(counterProvider);
 
     return Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(48),
-        color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
-        child: Text(
-          count.toString(),
-          textAlign: TextAlign.center,
-        ));
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.all(48),
+      color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+      child: Text(
+        count.toString(),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }

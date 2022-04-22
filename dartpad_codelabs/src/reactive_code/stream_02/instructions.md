@@ -1,10 +1,11 @@
 # Reactive Programming with Streams
 
 There are two aspects of Reactive Programming.
+<ol>
+<li> where the data/state change occurs or gets triggered from. </li>
 
-1️⃣ where the data/state change occurs or gets triggered from.
-
-2️⃣ listeners (one or more) who react to the data change.
+<li> listeners (one or more) who react to the data change.</li>
+</ol>
 
 It could either be a pure Dart code that performs an action reacting to the data change or a UI
 component/widget that rebuilds its UI configuration reacting to the new state.

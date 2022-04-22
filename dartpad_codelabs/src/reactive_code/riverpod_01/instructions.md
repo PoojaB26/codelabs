@@ -1,4 +1,4 @@
-# Reactive code with Riverpod
+# Reactive Programming with Riverpod
 
 This is the last part of our workshop, where you learn to write reactive code with Riverpod.
 Riverpod is not part of the core Flutter SDK and is a community built solution but is widely popular

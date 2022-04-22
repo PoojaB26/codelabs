@@ -1,7 +1,8 @@
 # Reactive Programming with ValueNotifier
 
+We have `ChangeNotifiers`, that is available in the core SDK, which provides change notification to its listeners. On the other hand, 
 `ValueNotifiers`, also available in the core SDK, is basically like a ChangeNotifier but
-holds only a single value. This is another alternative you can use for writing reactive code. 
+holds only a single value whereas ChangeNotifiers can encapsulate more complex state as well. This is another alternative you can use for writing reactive code. 
 
 ## ChangeNotifiers vs ValueNotifiers
 In a ChangeNotifier, you have to explicitly trigger `notifyListeners()`

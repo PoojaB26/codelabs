@@ -1,4 +1,4 @@
-# Reactive code with Riverpod - Step 2
+# Reactive Programming with Riverpod - Step 2
 
 ## Reading Providers
 

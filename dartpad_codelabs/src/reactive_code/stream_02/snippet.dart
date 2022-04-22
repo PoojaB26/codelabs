@@ -105,12 +105,13 @@ class CounterText extends StatelessWidget {
   Widget build(BuildContext context) {
     //TODO[3]: Wrap the Container with a StreamBuilder
     return Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(48),
-        color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
-        child: Text(
-          count.toString(),
-          textAlign: TextAlign.center,
-        ));
+      width: MediaQuery.of(context).size.width,
+      padding: const EdgeInsets.all(48),
+      color: Colors.primaries[math.Random().nextInt(Colors.primaries.length)],
+      child: Text(
+        count.toString(),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }

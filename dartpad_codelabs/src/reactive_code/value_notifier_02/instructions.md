@@ -1,4 +1,4 @@
-# Reactive code with ValueNotifier - Step 2
+# Reactive Programming with ValueNotifier - Step 2
 
 Like you have a StreamBuilder that can listen to a Stream, you will also need a widget that can
 listen to ValueNotifiers easily. And that is resolved with `ValueListenableBuilder()`.
